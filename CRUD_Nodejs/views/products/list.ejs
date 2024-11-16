@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<div class="container mx-auto my-8">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Product List</h2>
+  <a href="/products/add" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add Product</a>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+    <% products.forEach(product => { %>
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <img src="<%= product.images[0] || 'https://via.placeholder.com/150' %>" 
+             alt="<%= product.name %>" 
+             class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700"><%= product.name %></h3>
+          <p class="text-gray-500 truncate"><%= product.description %></p>
+          <p class="text-blue-600 font-bold mt-2">$<%= product.price %></p>
+          <div class="flex justify-between items-center mt-4">
+            <a href="/products/<%= product.slug %>" class="text-blue-500 hover:underline">Details</a>
+            <form action="/products/delete/<%= product._id %>" method="POST">
+              <button type="submit" class="text-red-500 hover:underline">Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

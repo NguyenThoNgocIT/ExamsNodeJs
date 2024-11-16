@@ -1,0 +1,93 @@
+[
+    {
+      "name": "Smartphone XYZ",
+      "description": "High-performance smartphone with stunning display and advanced features.",
+      "price": 799,
+      "stock": 50,
+      "images": [
+        "https://example.com/images/smartphone-xyz-1.jpg",
+        "https://example.com/images/smartphone-xyz-2.jpg"
+      ],
+      "slug": "smartphone-xyz",
+      "category": "Electronics",
+      "brand": "BrandX",
+      "rating": 4.5,
+      "numReviews": 150,
+      "status": "available",
+      "discount": 10,
+      "shipping": "free"
+    },
+    {
+      "name": "Laptop ABC",
+      "description": "Lightweight and powerful laptop, perfect for professionals.",
+      "price": 1200,
+      "stock": 30,
+      "images": [
+        "https://example.com/images/laptop-abc-1.jpg",
+        "https://example.com/images/laptop-abc-2.jpg"
+      ],
+      "slug": "laptop-abc",
+      "category": "Computers",
+      "brand": "BrandY",
+      "rating": 4.7,
+      "numReviews": 200,
+      "status": "available",
+      "discount": 15,
+      "shipping": "charged"
+    },
+    {
+      "name": "Wireless Earbuds 123",
+      "description": "Compact and high-quality earbuds with noise cancellation.",
+      "price": 99,
+      "stock": 100,
+      "images": [
+        "https://example.com/images/earbuds-123-1.jpg",
+        "https://example.com/images/earbuds-123-2.jpg"
+      ],
+      "slug": "wireless-earbuds-123",
+      "category": "Accessories",
+      "brand": "BrandZ",
+      "rating": 4.2,
+      "numReviews": 80,
+      "status": "available",
+      "discount": 5,
+      "shipping": "free"
+    },
+    {
+      "name": "4K Ultra HD TV",
+      "description": "Experience the best visuals with this 4K Ultra HD Smart TV.",
+      "price": 1500,
+      "stock": 20,
+      "images": [
+        "https://example.com/images/4k-tv-1.jpg",
+        "https://example.com/images/4k-tv-2.jpg"
+      ],
+      "slug": "4k-ultra-hd-tv",
+      "category": "Home Appliances",
+      "brand": "BrandQ",
+      "rating": 4.8,
+      "numReviews": 300,
+      "status": "available",
+      "discount": 20,
+      "shipping": "free"
+    },
+    {
+      "name": "Gaming Console Pro",
+      "description": "Next-generation gaming console with powerful performance.",
+      "price": 500,
+      "stock": 70,
+      "images": [
+        "https://example.com/images/gaming-console-pro-1.jpg",
+        "https://example.com/images/gaming-console-pro-2.jpg"
+      ],
+      "slug": "gaming-console-pro",
+      "category": "Gaming",
+      "brand": "BrandG",
+      "rating": 4.9,
+      "numReviews": 400,
+      "status": "available",
+      "discount": 10,
+      "shipping": "charged"
+    }
+  ]
+  

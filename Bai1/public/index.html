@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login Form</h2>
+      <img
+        src="https://via.placeholder.com/150"
+        alt="User Avatar"
+        class="avatar"
+      />
+
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <div class="remember-me">
+          <input type="checkbox" id="remember" name="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+
+        <button type="submit">Login</button>
+        <button type="button" onclick="cancel()">Cancel</button>
+
+        <p>
+          <a href="#">Forgot <span>password?</span></a>
+        </p>
+      </form>
+
+      <p id="response"></p>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          fetch("/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username, password }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("response").textContent = data.message;
+            })
+            .catch((error) => {
+              document.getElementById("response").textContent =
+                "Error: Could not connect to the server.";
+            });
+        });
+    </script>
+  </body>
+</html>
